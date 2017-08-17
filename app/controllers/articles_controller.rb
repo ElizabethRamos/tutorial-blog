@@ -1,5 +1,6 @@
 class ArticlesController < ApplicationController
   def new
+    @article = Article.new
   end
 
   def create
@@ -8,10 +9,15 @@ class ArticlesController < ApplicationController
       redirect_to @article
     else
       render :new
+    end
+  end
+
+  def show
+    @article = Article.find(params[:id])
   end
 
 private
   def article_params
-    params.require(:articles).permit(:title, :text)
+    params.require(:article).permit(:title, :text)
   end
 end
