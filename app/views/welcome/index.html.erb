@@ -1,8 +1,9 @@
-<h4> Welcome to this Simple Blog :-) </h4>
+<h4> Welcome to this blog! </h4>
 
+<h3> Articles: </h3>
   <% @articles.each do |article| %>
     <div>
-      <%= link_to article.title, article_path(article) %>
+      <h3> <%= link_to article.title, article_path(article) %></h3>
     </div>
   <% end %>
 
