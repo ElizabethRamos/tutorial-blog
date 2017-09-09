@@ -8,5 +8,6 @@
   <%= @article.text %>
 </div>
 
-<%= link_to 'Editar', edit_article_path %>
+<%= link_to 'Edit', edit_article_path %>
+<%= link_to 'Delete', destroy_article_path, method: :delete %>
 <%= link_to 'Voltar', root_path %>

@@ -1,17 +1,16 @@
 require 'rails_helper'
 
-feature 'User update Article' do
+feature 'User Destroy Article' do
   scenario 'successfully' do
     Article.create(title: 'Post', text: 'Alô, 1, 2, 3, testando...')
 
     visit root_path
 
     click_on 'Post'
-    click_on 'Edit'
+    click_on 'Delete'
 
-    fill_in 'Title', with: 'Second Post'
-    click_on 'Send'
+    visit root_path
 
-    expect(page).to have_content('Second Post')
+    expect(page).not_to have_link('Second Post')
   end
 end
