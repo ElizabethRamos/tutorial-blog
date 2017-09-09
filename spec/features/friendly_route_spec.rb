@@ -8,7 +8,6 @@ feature 'verify if the route is protected' do
 
     click_on 'First Post'
 
-    expect_path = "/articles/#{title}"
-    expect(current_path).to eq(expect_path)
+    expect(current_path).to eq('/articles/first-post')
   end
 end
