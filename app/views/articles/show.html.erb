@@ -1,13 +1,11 @@
 <div>
-  <strong>Title:</strong>
-  <%= @article.title %>
+  <h1>Title:</h1>
+    <%= @article.title %>
+  <h2>Text:</h2>
+    <%= @article.text %>
 </div>
 
-<div>
-  <strong>Text:</strong>
-  <%= @article.text %>
-</div>
 
-<%= link_to 'Edit', edit_article_path %>
-<%= link_to 'Delete', destroy_article_path, method: :delete %>
-<%= link_to 'Voltar', root_path %>
+<%= link_to 'Edit', edit_article_path(@article), class: 'btn btn-primary' %>
+<%= link_to 'Delete', destroy_article_path, class: 'btn btn-primary', method: :delete %>
+<%= link_to 'Back', root_path, class: 'btn btn-primary' %>

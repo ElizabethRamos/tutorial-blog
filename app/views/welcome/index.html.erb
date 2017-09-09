@@ -1,4 +1,4 @@
-<h1>Simple Blog</h1>
+<h1>Blog</h1>
 
   <% @articles.each do |article| %>
     <div>
@@ -7,5 +7,5 @@
   <% end %>
 
   <div>
-    <%= link_to 'New Article', new_article_path %>
+    <%= link_to 'New Article', new_article_path, class: 'btn btn-primary' %>
   </div>
